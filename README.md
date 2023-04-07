@@ -23,11 +23,51 @@
 
 Big & Little Endian utils for Kotlin Multiplatform
 
+Small library which adds 2 kotlin `value class`es, `BigEndian` and `LittleEndian`
+
 ### Usage
 
 ```kotlin
 fun main() {
-    TODO("Not yet implemented")
+    // Extension functions for converting Short, Int, or
+    // Long to LittleEndian or BigEndian
+    // e.g. Long.toLittleEndian()
+    val le = 5L.toLittleEndian()
+    val be = 5L.toBigEndian()
+    
+    println(le)
+    // LE[5,0,0,0,0,0,0,0]
+    println(be)
+    // BE[0,0,0,0,0,0,0,5]
+
+    println(le[0])
+    // 5
+    println(be[7])
+    // 5
+    
+    // Helper functions to convert bytes to Short, Int, or Long
+    val leLong = LittleEndian.bytesToLong(0, 0, 0, 5, 0, 0, 0, 10)
+    println(leLong)
+    // 720575940463165440
+    val beLong = BigEndian.bytesToLong(0, 0, 0, 5, 0, 0, 0, 10)
+    println(beLong)
+    // 21474836490
+
+    val bytes = ByteArray(le.size + be.size)
+    le.copyInto(bytes)
+    be.copyInto(bytes, le.size)
+    
+    // Safely convert BigEndian or LittleEndian to the desired
+    // primitives w/o worrying about the size of the underlying
+    // ByteArray
+    be.toByte()
+    be.toShort()
+    be.toInt()
+    be.toLong()
+    
+    // APIs for both classes are the same, with only 1 difference
+    be.toLittleEndian() // Convert a BigEndian to a LittleEndian
+    le.toBigEndian()    // Convert a LittleEndian to a BigEndian
 }
 ```
 
