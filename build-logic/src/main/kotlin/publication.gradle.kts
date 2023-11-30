@@ -1,5 +1,3 @@
-import org.gradle.plugins.signing.SigningExtension
-
 /*
  * Copyright (c) 2023 Matthew Nelson
  *
@@ -15,6 +13,8 @@ import org.gradle.plugins.signing.SigningExtension
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
+import org.gradle.plugins.signing.SigningExtension
+
 plugins {
     id("com.vanniktech.maven.publish")
 }
