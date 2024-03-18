@@ -13,6 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
+import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
+import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin
+import org.jetbrains.kotlin.gradle.targets.js.npm.tasks.KotlinNpmInstallTask
 import org.jetbrains.kotlin.gradle.targets.js.yarn.YarnPlugin
 import org.jetbrains.kotlin.gradle.targets.js.yarn.YarnRootExtension
 
@@ -37,11 +40,19 @@ plugins.withType<YarnPlugin> {
     the<YarnRootExtension>().lockFileDirectory = rootDir.resolve(".kotlin-js-store")
 }
 
-apiValidation {
-    @Suppress("LocalVariableName")
-    val CHECK_PUBLICATION = findProperty("CHECK_PUBLICATION") as? String
+plugins.withType<NodeJsRootPlugin> {
+    the<NodeJsRootExtension>().apply {
+        nodeVersion = "21.0.0-v8-canary202309167e82ab1fa2"
+        nodeDownloadBaseUrl = "https://nodejs.org/download/v8-canary"
+    }
 
-    if (CHECK_PUBLICATION != null) {
+    tasks.withType<KotlinNpmInstallTask>().configureEach {
+        args.add("--ignore-engines")
+    }
+}
+
+apiValidation {
+    if (findProperty("CHECK_PUBLICATION") != null) {
         ignoredProjects.add("check-publication")
     }
 }

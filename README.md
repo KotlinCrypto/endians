@@ -8,6 +8,7 @@
 ![badge-platform-jvm]
 ![badge-platform-js]
 ![badge-platform-js-node]
+![badge-platform-wasm]
 ![badge-platform-linux]
 ![badge-platform-macos]
 ![badge-platform-ios]
@@ -18,10 +19,6 @@
 ![badge-support-apple-silicon]
 ![badge-support-js-ir]
 ![badge-support-linux-arm]
-
-<!--
-![badge-platform-wasm]
--->
 
 Big & Little Endian utils for Kotlin Multiplatform
 
