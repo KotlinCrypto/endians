@@ -1,0 +1,82 @@
+// Klib ABI Dump
+// Targets: [androidNativeArm32, androidNativeArm64, androidNativeX64, androidNativeX86, iosArm64, iosSimulatorArm64, iosX64, js, linuxArm64, linuxX64, macosArm64, macosX64, mingwX64, tvosArm64, tvosSimulatorArm64, tvosX64, wasmJs, wasmWasi, watchosArm32, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64, watchosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <org.kotlincrypto.endians:endians>
+final value class org.kotlincrypto.endians/BigEndian { // org.kotlincrypto.endians/BigEndian|null[0]
+    constructor <init>(kotlin/Byte, kotlin/Byte) // org.kotlincrypto.endians/BigEndian.<init>|<init>(kotlin.Byte;kotlin.Byte){}[0]
+    constructor <init>(kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte) // org.kotlincrypto.endians/BigEndian.<init>|<init>(kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte){}[0]
+    constructor <init>(kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte) // org.kotlincrypto.endians/BigEndian.<init>|<init>(kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte){}[0]
+
+    final val size // org.kotlincrypto.endians/BigEndian.size|{}size[0]
+        final fun <get-size>(): kotlin/Int // org.kotlincrypto.endians/BigEndian.size.<get-size>|<get-size>(){}[0]
+    final val sizeBits // org.kotlincrypto.endians/BigEndian.sizeBits|{}sizeBits[0]
+        final fun <get-sizeBits>(): kotlin/Int // org.kotlincrypto.endians/BigEndian.sizeBits.<get-sizeBits>|<get-sizeBits>(){}[0]
+
+    final fun copyInto(kotlin/ByteArray, kotlin/Int =..., kotlin/Int =..., kotlin/Int =...): kotlin/ByteArray // org.kotlincrypto.endians/BigEndian.copyInto|copyInto(kotlin.ByteArray;kotlin.Int;kotlin.Int;kotlin.Int){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // org.kotlincrypto.endians/BigEndian.equals|equals(kotlin.Any?){}[0]
+    final fun get(kotlin/Int): kotlin/Byte // org.kotlincrypto.endians/BigEndian.get|get(kotlin.Int){}[0]
+    final fun getOrElse(kotlin/Int, kotlin/Function1<kotlin/Int, kotlin/Byte>): kotlin/Byte // org.kotlincrypto.endians/BigEndian.getOrElse|getOrElse(kotlin.Int;kotlin.Function1<kotlin.Int,kotlin.Byte>){}[0]
+    final fun getOrNull(kotlin/Int): kotlin/Byte? // org.kotlincrypto.endians/BigEndian.getOrNull|getOrNull(kotlin.Int){}[0]
+    final fun hashCode(): kotlin/Int // org.kotlincrypto.endians/BigEndian.hashCode|hashCode(){}[0]
+    final fun iterator(): kotlin.collections/ByteIterator // org.kotlincrypto.endians/BigEndian.iterator|iterator(){}[0]
+    final fun plus(kotlin/ByteArray): kotlin/ByteArray // org.kotlincrypto.endians/BigEndian.plus|plus(kotlin.ByteArray){}[0]
+    final fun toByte(): kotlin/Byte // org.kotlincrypto.endians/BigEndian.toByte|toByte(){}[0]
+    final fun toByteArray(): kotlin/ByteArray // org.kotlincrypto.endians/BigEndian.toByteArray|toByteArray(){}[0]
+    final fun toInt(): kotlin/Int // org.kotlincrypto.endians/BigEndian.toInt|toInt(){}[0]
+    final fun toLittleEndian(): org.kotlincrypto.endians/LittleEndian // org.kotlincrypto.endians/BigEndian.toLittleEndian|toLittleEndian(){}[0]
+    final fun toLong(): kotlin/Long // org.kotlincrypto.endians/BigEndian.toLong|toLong(){}[0]
+    final fun toShort(): kotlin/Short // org.kotlincrypto.endians/BigEndian.toShort|toShort(){}[0]
+    final fun toString(): kotlin/String // org.kotlincrypto.endians/BigEndian.toString|toString(){}[0]
+
+    final object Companion { // org.kotlincrypto.endians/BigEndian.Companion|null[0]
+        final fun (kotlin/Int).toBigEndian(): org.kotlincrypto.endians/BigEndian // org.kotlincrypto.endians/BigEndian.Companion.toBigEndian|toBigEndian@kotlin.Int(){}[0]
+        final fun (kotlin/Long).toBigEndian(): org.kotlincrypto.endians/BigEndian // org.kotlincrypto.endians/BigEndian.Companion.toBigEndian|toBigEndian@kotlin.Long(){}[0]
+        final fun (kotlin/Short).toBigEndian(): org.kotlincrypto.endians/BigEndian // org.kotlincrypto.endians/BigEndian.Companion.toBigEndian|toBigEndian@kotlin.Short(){}[0]
+        final fun bytesToInt(kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte): kotlin/Int // org.kotlincrypto.endians/BigEndian.Companion.bytesToInt|bytesToInt(kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte){}[0]
+        final fun bytesToLong(kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte): kotlin/Long // org.kotlincrypto.endians/BigEndian.Companion.bytesToLong|bytesToLong(kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte){}[0]
+        final fun bytesToShort(kotlin/Byte, kotlin/Byte): kotlin/Short // org.kotlincrypto.endians/BigEndian.Companion.bytesToShort|bytesToShort(kotlin.Byte;kotlin.Byte){}[0]
+    }
+}
+
+final value class org.kotlincrypto.endians/LittleEndian { // org.kotlincrypto.endians/LittleEndian|null[0]
+    constructor <init>(kotlin/Byte, kotlin/Byte) // org.kotlincrypto.endians/LittleEndian.<init>|<init>(kotlin.Byte;kotlin.Byte){}[0]
+    constructor <init>(kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte) // org.kotlincrypto.endians/LittleEndian.<init>|<init>(kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte){}[0]
+    constructor <init>(kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte) // org.kotlincrypto.endians/LittleEndian.<init>|<init>(kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte){}[0]
+
+    final val size // org.kotlincrypto.endians/LittleEndian.size|{}size[0]
+        final fun <get-size>(): kotlin/Int // org.kotlincrypto.endians/LittleEndian.size.<get-size>|<get-size>(){}[0]
+    final val sizeBits // org.kotlincrypto.endians/LittleEndian.sizeBits|{}sizeBits[0]
+        final fun <get-sizeBits>(): kotlin/Int // org.kotlincrypto.endians/LittleEndian.sizeBits.<get-sizeBits>|<get-sizeBits>(){}[0]
+
+    final fun copyInto(kotlin/ByteArray, kotlin/Int =..., kotlin/Int =..., kotlin/Int =...): kotlin/ByteArray // org.kotlincrypto.endians/LittleEndian.copyInto|copyInto(kotlin.ByteArray;kotlin.Int;kotlin.Int;kotlin.Int){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // org.kotlincrypto.endians/LittleEndian.equals|equals(kotlin.Any?){}[0]
+    final fun get(kotlin/Int): kotlin/Byte // org.kotlincrypto.endians/LittleEndian.get|get(kotlin.Int){}[0]
+    final fun getOrElse(kotlin/Int, kotlin/Function1<kotlin/Int, kotlin/Byte>): kotlin/Byte // org.kotlincrypto.endians/LittleEndian.getOrElse|getOrElse(kotlin.Int;kotlin.Function1<kotlin.Int,kotlin.Byte>){}[0]
+    final fun getOrNull(kotlin/Int): kotlin/Byte? // org.kotlincrypto.endians/LittleEndian.getOrNull|getOrNull(kotlin.Int){}[0]
+    final fun hashCode(): kotlin/Int // org.kotlincrypto.endians/LittleEndian.hashCode|hashCode(){}[0]
+    final fun iterator(): kotlin.collections/ByteIterator // org.kotlincrypto.endians/LittleEndian.iterator|iterator(){}[0]
+    final fun plus(kotlin/ByteArray): kotlin/ByteArray // org.kotlincrypto.endians/LittleEndian.plus|plus(kotlin.ByteArray){}[0]
+    final fun toBigEndian(): org.kotlincrypto.endians/BigEndian // org.kotlincrypto.endians/LittleEndian.toBigEndian|toBigEndian(){}[0]
+    final fun toByte(): kotlin/Byte // org.kotlincrypto.endians/LittleEndian.toByte|toByte(){}[0]
+    final fun toByteArray(): kotlin/ByteArray // org.kotlincrypto.endians/LittleEndian.toByteArray|toByteArray(){}[0]
+    final fun toInt(): kotlin/Int // org.kotlincrypto.endians/LittleEndian.toInt|toInt(){}[0]
+    final fun toLong(): kotlin/Long // org.kotlincrypto.endians/LittleEndian.toLong|toLong(){}[0]
+    final fun toShort(): kotlin/Short // org.kotlincrypto.endians/LittleEndian.toShort|toShort(){}[0]
+    final fun toString(): kotlin/String // org.kotlincrypto.endians/LittleEndian.toString|toString(){}[0]
+
+    final object Companion { // org.kotlincrypto.endians/LittleEndian.Companion|null[0]
+        final fun (kotlin/Int).toLittleEndian(): org.kotlincrypto.endians/LittleEndian // org.kotlincrypto.endians/LittleEndian.Companion.toLittleEndian|toLittleEndian@kotlin.Int(){}[0]
+        final fun (kotlin/Long).toLittleEndian(): org.kotlincrypto.endians/LittleEndian // org.kotlincrypto.endians/LittleEndian.Companion.toLittleEndian|toLittleEndian@kotlin.Long(){}[0]
+        final fun (kotlin/Short).toLittleEndian(): org.kotlincrypto.endians/LittleEndian // org.kotlincrypto.endians/LittleEndian.Companion.toLittleEndian|toLittleEndian@kotlin.Short(){}[0]
+        final fun bytesToInt(kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte): kotlin/Int // org.kotlincrypto.endians/LittleEndian.Companion.bytesToInt|bytesToInt(kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte){}[0]
+        final fun bytesToLong(kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte, kotlin/Byte): kotlin/Long // org.kotlincrypto.endians/LittleEndian.Companion.bytesToLong|bytesToLong(kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte;kotlin.Byte){}[0]
+        final fun bytesToShort(kotlin/Byte, kotlin/Byte): kotlin/Short // org.kotlincrypto.endians/LittleEndian.Companion.bytesToShort|bytesToShort(kotlin.Byte;kotlin.Byte){}[0]
+    }
+}
+
+final fun (kotlin/ByteArray).org.kotlincrypto.endians/plus(org.kotlincrypto.endians/BigEndian): kotlin/ByteArray // org.kotlincrypto.endians/plus|plus@kotlin.ByteArray(org.kotlincrypto.endians.BigEndian){}[0]
+final fun (kotlin/ByteArray).org.kotlincrypto.endians/plus(org.kotlincrypto.endians/LittleEndian): kotlin/ByteArray // org.kotlincrypto.endians/plus|plus@kotlin.ByteArray(org.kotlincrypto.endians.LittleEndian){}[0]
