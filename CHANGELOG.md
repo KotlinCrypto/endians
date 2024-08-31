@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Version 0.3.1 (2024-08-31)
+ - Updates dependencies
+     - Kotlin `1.9.23` -> `1.9.24`
+ - Fixes multiplatform metadata manifest `unique_name` parameter for 
+   all source sets to be truly unique.
+ - Updates jvm `.kotlin_module` with truly unique file name.
+
 ## Version 0.3.0 (2024-03-18)
  - Updates dependencies
      - Kotlin `1.9.21` -> `1.9.23`
