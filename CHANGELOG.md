@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 0.3.1 (2025-01-13)
+ - Deprecates `BigEndian` & `LittleEndian`
+ - Adds NOTICE of library replacement to README
+
 ## Version 0.3.1 (2024-08-31)
  - Updates dependencies
      - Kotlin `1.9.23` -> `1.9.24`
