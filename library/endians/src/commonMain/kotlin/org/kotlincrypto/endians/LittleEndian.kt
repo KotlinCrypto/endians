@@ -29,6 +29,7 @@ import kotlin.jvm.JvmStatic
  * @see [bytesToLong]
  * */
 @JvmInline
+@Deprecated("Functionality replaced by bitops/endian. See https://github.com/KotlinCrypto/bitops")
 public value class LittleEndian private constructor(private val data: ByteArray) {
 
     /** [Short] 16 bits */
